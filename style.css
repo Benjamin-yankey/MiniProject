@@ -1,0 +1,150 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+    padding: 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* For the heading */
+.icontext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+li i {
+    margin-right: 20px; 
+}
+
+.right li img {
+    margin-left: 5px;
+}
+
+.right img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding-top: ;
+}
+
+/* Globe icon decoration */
+.custom-icon {
+    background-color: rgb(241, 240, 240); 
+    color: #000; 
+    padding: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px; 
+}
+
+.custom-icon1 {
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(2, 2, 0, 0.1);
+    background-color: rgb(241, 240, 240);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.h {
+    height: 0.5px;
+    background-color: rgb(241, 240, 240);
+}
+
+/* Inside alignment */
+.inside {
+    width: 400px; 
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+label{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.inside form a {
+    text-decoration: underline;
+    cursor: pointer;  
+}
+
+.inside h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.inside p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="submit"] , input[type="password"]{
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+
+input[type="text"] ,input[type= "password"] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #2669b0; 
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 5px; 
+}
+
+input[type="submit"]:hover {
+    background-color: #2aabbe; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    overflow: hidden; 
+}

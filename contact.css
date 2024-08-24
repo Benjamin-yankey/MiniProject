@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.contact-background {
+    position: relative;
+    background: #fff;
+    padding: 40px; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    width: 70%; 
+    text-align: center;
+    margin: 50px;
+}
+
+.contact-background h1 {
+    margin-bottom: 10px; 
+    text-align: left;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+}
+
+.contact-background span {
+    display: block;
+    margin-bottom: 10px; 
+    text-align: left;
+    font-size: clamp(0.5rem, 2vw, 4rem);
+}
+
+.contact-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    padding: 12px;
+    margin: 12px 0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px;
+    outline: none;
+    background: #eee; 
+}
+
+input::placeholder {
+    padding-left: 12px; 
+}
+
+.inputs:focus {
+    border-bottom: 2px solid #04125c;
+    outline: none;
+    box-shadow: none;
+}
+
+.contact-background-block {
+    margin: 10px;
+    padding-left: 40px; 
+    width: 400px;
+    max-width: 50%;
+}
+
+.contact-input button {
+    margin-top: 2px; 
+    padding: 5px 5px; 
+    background: #000;
+    color: #ccc;
+    border: none;
+    font-size: clamp(0.5rem, 2vw, 2.2rem); 
+}
+
+.img-logo {
+    position: absolute;
+    top: -15px; 
+    left: -30px; 
+    width: 80px; 
+}
+
+.image-class {
+    position: relative;
+    top: -30px;
+    left: -20px;
+}
+
+.icon-class {
+    position: absolute;
+    top: 50%;
+    left: 1px; 
+    font-size: clamp(0.7rem, 2vw, 2.2rem); 
+    color: #fff;
+    background: #92bdf9;
+    padding: 12px; 
+    color: #04125c;
+}
+
+.color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px; 
+    max-width: 40%;
+    background-color: #000;
+    z-index: 1; 
+}
+
+.info-block {
+    background: #316ff6;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 60%;
+    width: 500px; 
+    max-width: 50%;
+    padding-top: 50px;
+    z-index: 2;
+    color: #fff;  
+    padding-left: 40px;
+}
+
+.info-block h1 {
+    color: #fff;
+}
+
+.info-block .info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-block .info-item i {
+    margin-right: 10px; 
+    font-size: clamp(1rem, 2vw, 2rem); 
+    padding-top: 10px;
+}
+
+.info-block .info-item span {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding-top: 20px;
+}
+
+.animation {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    width: 50px; 
+    height: 50px; 
+    background-color: #92bdf9; 
+    z-index: 3; 
+}
+
+
+@media (max-width: 1024px) {
+    .contact-background {
+        width: 80%;
+        margin: 30px;
+        padding: 30px;
+    }
+
+    .info-block {
+        width: 70%;
+        height: 50%;
+    }
+
+    .img-logo {
+        width: 60px; 
+        top: -10px; 
+        left: -20px; 
+    }
+
+    .contact-background h1, .contact-background span {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-background {
+        width: 90%;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .img-logo {
+        width: 50px; 
+        top: -5px; 
+        left: -15px; 
+    }
+
+    .info-block {
+        width: 100%;
+        height: auto;
+        top: 20%;
+        padding: 30px 20px;
+    }
+
+    .info-block h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-block .info-item span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .contact-background {
+        width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .contact-background h1, .contact-background span {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contact-background-block {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .info-block {
+        width: 100%;
+        height: auto;
+        top: 10%;
+        padding: 20px 10px;
+    }
+
+    .info-block h1 {
+        font-size: 1.2rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .info-block .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-block .info-item i {
+        margin-bottom: 5px;
+    }
+
+    .info-block .info-item span {
+        font-size: 0.9rem;
+        padding-top: 5px;
+    }
+
+    .color {
+        width: 100%;
+        height: 50px;
+    }
+
+    .icon-class {
+        font-size: 1.5rem;
+        top: auto;
+        bottom: 10px;
+    }
+
+    .animation {
+        display: none;
+    }
+
+    .img-logo {
+        width: 40px; 
+        top: 0; 
+        left: 0; 
+    }
+}
+

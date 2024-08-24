@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="header">
+        <div class="icontext">
+            <!-- <i class="fa-solid fa-user-nurse custom-icon"></i> -->
+             <img src="pictures/logo.png" alt="logo picture" class="custom-icon">
+            <h3>MediCo</h3>
+        </div>
+    </div>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="signUpForm">
+                <h1>Create Account</h1>
+                <div class="media-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
+                </div>
+                <p>or use your email registration</p>
+                <div class="nana">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="example@MediCo.com" required>
+                <input type="password" name="password" id="password" placeholder="password" required>
+                <input type="text" placeholder="Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="btn">
+                    <div class="picture-frame-btn">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form id="signInForm">
+                <h1>Sign In</h1>
+                <div class="media-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
+                </div>
+                <p>or use your email password</p>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="example@MediCo.com" required>
+                <input type="password" name="password" id="password"  placeholder="password">
+                <a href="forget.html" class="fp">forget password</a>
+                <div class="btn">
+                    <div class="picture-frame-btn">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back</h1>
+                    <p>Enter your personal details to use all of the site features</p>
+                    <div class="picture-frame-btn">
+                    <button class="hidden" id="login">Sign In</button>
+                    </div>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend</h1>
+                    <p>Register with your personal details to use all of the site features</p>
+                    <div class="picture-frame-btn">
+                    <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 MediCo. All rights reserved.</p>
+        
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('container');
+            const signInButton = document.getElementById('login');
+            const signUpButton = document.getElementById('register');
+            const signUpForm = document.getElementById('signUpForm');
+            const signInForm = document.getElementById('signInForm');
+
+            console.log('DOMContentLoaded: container:', container);
+            console.log('DOMContentLoaded: signInButton:', signInButton);
+            console.log('DOMContentLoaded: signUpButton:', signUpButton);
+
+            signInButton.addEventListener('click', () => {
+                console.log('Sign In button clicked');
+                container.classList.remove('active');
+                console.log('container classList:', container.classList);
+            });
+
+            signUpButton.addEventListener('click', () => {
+                console.log('Sign Up button clicked');
+                container.classList.add('active');
+                console.log('container classList:', container.classList);
+            });
+
+            signUpForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                window.location.href = 'home.html';
+            });
+
+            signInForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                window.location.href = 'home.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1.appoint {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3em;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #1941ba;
+    outline: none;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #aaa;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #316ff6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #04125c;
+    transform: translateY(-2px);
+}
+
+button.cancel-button {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+button.cancel-button:hover {
+    background-color: #c82333;
+}
+
+ul#appointments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#appointments-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul#appointments-list li:hover {
+    background-color: #f1f1f1;
+}
+
+ul#appointments-list li span {
+    font-size: 1em;
+}
+
+ul#appointments-list li span.appointment-date {
+    font-weight: bold;
+    color: #555;
+}
+
+ul#appointments-list li span.appointment-time, ul#appointments-list li span.doctor-name, ul#appointments-list li span.reason {
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1.appoint {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}

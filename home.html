@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCo</title>
+    <link rel="icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <section class="section-1">
+    <div class="icontext">
+        <div class="left">
+          <img src="pictures/logo.png" alt="logo picture">
+            <h3>MediCo</h3>
+        </div>
+        <div class="home-list-inside"> 
+          <!-- <i class="fa-solid fa-xmark fa close-btn" id="closeBtn"></i> -->
+            <a href="servicespage.html"><li>Services</li></a>
+            <a href="#"><li>Shop</li></a>
+            <a href="#"><li>Find a provider</li></a> 
+            <a href="#"><li>Resources</li></a>
+        </div>
+        <div class="right">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search" onkeyup="toggleIconVisibility()">
+
+        <i class="fa fa-search"></i>
+      </div>
+      
+      <i class="fa-solid fa-bars fas " id="menuBtn"></i>
+
+        <input type="button" value="Sign Up" onclick="goBack()" class="bttn">
+      </div>
+    </div>
+
+            <div class="container">
+            <video src="pictures/Pinterest(1).mp4" autoplay muted loop class="video-item"></video>
+            <div class="content">
+              <h1>Healthcare that fits your life</h1>
+              <p class="paragraph">
+                <span style="--d: 0s;">Get the care you need, when you need it.</span>
+                <span style="--d: .1s">From virtual visits to at-home tests.</span>
+                <span  style="--d: .2s">We are here to help you feel your best.</span>
+              </p>
+              <div class="button-container">
+              <button class="left-button" onclick="goBack()">Get Started</button>
+            </div>
+          </div>
+          </div>
+  </section>
+
+
+  <section>
+    <div class="services">
+      <div class="text-block">
+          <h1>Our Services</h1>
+          <p>Whether you're looking for everyday care or managing a chronic condition, we offer a range of Services to fit your needs.
+          </p>
+      </div>
+
+    <div class="images">
+      <div class="card">
+       <img src="pictures/11.jpg">
+        <div class="card__content">
+          <p class="card__title">Virtual visits</p>
+          <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="pictures/All About Medicare Part D – Prescription Drug Coverage _ Sixty and Me.jpg">
+         <div class="card__content">
+           <p class="card__title">Prescriptions</p>
+           <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+         </div>
+       </div>
+
+       <div class="card">
+        <img src="pictures/Laboratory.jpg">
+         <div class="card__content">
+           <p class="card__title">Lab tests</p>
+           <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+         </div>
+       </div>
+
+       <div class="card">
+        <img src="pictures/Free Vector _ Nursing home concept illustration.jpg">
+         <div class="card__content">
+           <p class="card__title">At-home Care</p>
+           <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+         </div>
+       </div>
+    </div>
+      
+
+  </section>
+
+
+  <section class="prescription-section">
+    <div class="prescriptions">
+      <h1>Prescriptions Made Simple</h1>
+      <div class="prep">
+
+        <div class="card1">
+          <div class="image2">
+            <img src="pictures/Call _ Chat . Video. Conference" alt="">
+          </div>
+           <div class="content3">
+             <a href="#">
+               <span class="title">
+                Consult with a provider to get a prescription for medication.
+               </span>
+             </a>
+         
+             <p class="desc">
+              Book a virtual visit to speak with a healthcare provider who can write, refill, or renew a prescriptionfor most medications.
+             </p>
+         
+             <a class="action" href="service-overview.html">
+               Find out more
+               <span aria-hidden="true">
+                 →
+               </span>
+             </a>
+           </div>
+         </div>
+
+
+         <div class="card1">
+          <div class="image2">
+            <img src="pictures/Premium Vector _ Businessman receive medicine from the doctor.jpg" alt="">
+          </div>
+           <div class="content3">
+             <a href="#">
+               <span class="title">
+                 Have a prescription transferred from your current pharmacy.
+               </span>
+             </a>
+         
+             <p class="desc">
+              Easily transfer your prescription to the MediCo pharmacy. We'll take care of the rest, including contacting your old pharmacy and transferring your refills.
+             </p>
+         
+             <a class="action" href="service-overview.html">
+               Find out more
+               <span aria-hidden="true">
+                 →
+               </span>
+             </a>
+           </div>
+         </div>
+
+
+
+         <div class="card1">
+          <div class="image2">
+            <img src="pictures/Courier delivered package of drugs.jpg" alt="">
+          </div>
+           <div class="content3">
+             <a href="#">
+               <span class="title">
+                 Get your medication delivered to your home, office, or nearest pharmacy.
+               </span>
+             </a>
+         
+             <p class="desc">
+               Choose free standard to get your medication delivered to your home, office, or nearest pharmacy. If you're in a hurry you can also pay for expedited shipping.
+             </p>
+         
+             <a class="action" href="service-overview.html">
+               Find out more
+               <span aria-hidden="true">
+                 →
+               </span>
+             </a>
+           </div>
+         </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="review-section">
+    <div class="review">
+    <h1>What people are saying</h1>
+
+    <div class="review-messa">
+      <h3>Kara</h3>
+      <p class="date">Jun 1, 2022</p>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <p>Greate service. I was able to get a prescription for my daughter in no time at all. Highly recommend.</p>
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </div>
+
+    <div class="review-messa">
+      <h3>Alex</h3>
+      <p class="date">May 30, 2022</p>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <p>I've been using MediCo for a few months now and have had nothing but positive experiences. The doctors are very knowledgeable and always take the time to answer any questions I may have. The delivery is fast and the customer service is top-notch!</p>
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </div>
+
+    <div class="review-messa">
+      <h3>Sarah</h3>
+      <p class="date">May 29, 2022</p>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <p>I've been using MediCo for a few months now and have had nothing but positive experiences. The doctors are very knowledgeable and always take the time to answer any questions I may have. The delivery is fast and the customer service is top-notch!</p>
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+  </section>
+     
+    
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>MediCo</h3>
+            <p>Leading provider of healthcare services.</p>
+        </div>
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Prescriptions</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@medico.com</p>
+            <p>Phone: +123-456-7890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 MediCo. All rights reserved.
+    </div>
+</footer>
+
+    <script src="home.js"></script>
+    <script>
+      function goBack() {
+          window.location.href = 'signin.html';
+      }
+
+      function toggleIconVisibility() {
+        var inputField = document.getElementById("searchInput");
+        var icon = inputField.parentElement.querySelector("i.fa-search"); 
+        if (inputField.value.trim() !== "") {
+            icon.style.display = "none"; 
+        } else {
+            icon.style.display = "inline-block"; 
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', function() {
+        menu.classList.add('open');
+        menuBtn.style.display = 'none';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        menu.classList.remove('open');
+        menuBtn.style.display = 'block';
+    });
+});
+
+  </script>
+  
+</body>
+</html>

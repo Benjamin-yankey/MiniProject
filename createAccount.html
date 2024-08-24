@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="create.css">
+    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="icontext">
+        <ol>
+            <div class="left">
+                <li><i class="fa-solid fa-user-nurse custom-icon1"></i></li>
+                <li><h2>MediCo</h2></li>
+            </div>
+            <div class="right">
+                <li><h2> For providers</h2></li>
+            </div>
+        </ol>
+    </div> 
+    <div class="container">
+        <div class="inside">
+            <p>Personal Information</p>
+
+
+            <form action="home.html">
+                <label for="username">First name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="">
+                
+                
+                <label for="username">Last name</label>
+                <input type="text" id="last-name" name="last-name">
+                
+                
+                <label for="username">Date of birth</label>
+                <input type="date" id="birth" name="birth">
+            
+            
+                <div class="gender">
+                    <div class="caret">
+                        <label for="username">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer_not_to_say">Prefer not to say</option>
+                        </select>
+                    </div>
+                 </div>
+
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username">
+
+
+                <label for="username">Password</label>
+                <input type="password" id="username" name="username">
+
+
+                <input type="checkbox" id="username" name="username">
+                <label for="username">I have read and agree to the terms of service.</label>
+
+                <button type="submit">submit</button>
+              </form>
+        </div>
+    </div>
+</body>
+</html>

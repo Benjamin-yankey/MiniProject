@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Management</title>
+    <link rel="stylesheet" href="ladtest.css">
+    <link rel="icon" href="pictures/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lab Test Management</h1>
+        </header>
+        
+        <nav class="tabs">
+            <a href="#results" class="tab-button active">Lab Results</a>
+            <a href="#request" class="tab-button">Request for Lab Test</a>
+            <a href="#uploads" class="tab-button">Recent Uploads</a>
+            <a href="#inquiry" class="tab-button">Inquiry</a>
+        </nav>
+        
+        <div id="results" class="tab-content active">
+            <section class="patient-details">
+                <h2>Patient Details</h2>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Age:</strong> 30</p>
+                <p><strong>Gender:</strong> Male</p>
+                <p><strong>Patient ID:</strong> 123456</p>
+            </section>
+            
+            <section class="test-results">
+                <h2>Test Results</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Test</th>
+                            <th>Result</th>
+                            <th>Normal Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CBC - White Blood Cells</td>
+                            <td>5.5 x10^9/L</td>
+                            <td>4.0-10.0 x10^9/L</td>
+                        </tr>
+                        <tr>
+                            <td>Glucose Level</td>
+                            <td>90 mg/dL</td>
+                            <td>70-100 mg/dL</td>
+                        </tr>
+                        <tr>
+                            <td>Cholesterol</td>
+                            <td>190 mg/dL</td>
+                            <td>Less than 200 mg/dL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        
+        <div id="request" class="tab-content">
+            <section class="request-lab-test">
+                <h2>Request for Lab Test</h2>
+                <form action="#" method="POST">
+                    <label for="test-name">Choose a Test:</label>
+                    <select id="test-name" name="test-name" required>
+                        <option value="" disabled selected>Select a Test</option>
+                        <option value="cbc">CBC - Complete Blood Count</option>
+                        <option value="blood-glucose">Blood Glucose</option>
+                        <option value="lipid-profile">Lipid Profile</option>
+                        <option value="thyroid-function">Thyroid Function Test</option>
+                        <option value="renal-function">Renal Function Test</option>
+                        <option value="liver-function">Liver Function Test</option>
+                        <option value="vitamin-d">Vitamin D Test</option>
+                    </select>
+
+                    <label for="test-description">Description:</label>
+                    <textarea id="test-description" name="test-description" rows="4" placeholder="Additional details or symptoms..." required></textarea>
+
+                    <button type="submit">Submit Request</button>
+                </form>
+            </section>
+        </div>
+        
+        <div id="uploads" class="tab-content">
+            <section class="recent-uploads">
+                <h2>Recent Uploads</h2>
+                <ul>
+                    <li>
+                        <span>Upload 1: CBC - 2024-07-01</span>
+                        <button class="view-details" data-file="uploads/upload1.pdf">View Details</button>
+                    </li>
+                    <li>
+                        <span>Upload 2: Glucose Level - 2024-07-05</span>
+                        <button class="view-details" data-file="uploads/upload2.pdf">View Details</button>
+                    </li>
+                    <li>
+                        <span>Upload 3: Cholesterol - 2024-07-10</span>
+                        <button class="view-details" data-file="uploads/upload3.pdf">View Details</button>
+                    </li>
+                    <li>
+                        <span>Upload 4: Thyroid Function Test - 2024-06-22</span>
+                        <button class="view-details" data-file="uploads/upload4.pdf">View Details</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+        <div id="inquiry" class="tab-content">
+            <section class="inquiry">
+                <h2>Ask If Your Lab Result Is Ready</h2>
+                <form action="#" method="POST">
+                    <label for="patient-id-inquiry">Patient ID:</label>
+                    <input type="text" id="patient-id-inquiry" name="patient-id-inquiry" required>
+                    
+                    <button type="submit">Check Status</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Modal for displaying upload details -->
+        <div id="details-modal" class="details-modal">
+            <div class="details-content">
+                <button class="close-modal">Close</button>
+                <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="500px">
+                <a id="download-button" href="" download="LabTestResult.pdf" class="download-button">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all tab buttons and tab contents
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Function to handle tab switching
+        function switchTab(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute('href').substring(1);
+
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.querySelector(`.tab-button[href="#${targetId}"]`).classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+        }
+
+        // Add click event listener to each tab button
+        tabButtons.forEach(button => {
+            button.addEventListener('click', switchTab);
+        });
+
+        // Handle recent uploads modal
+        const viewDetailsButtons = document.querySelectorAll('.view-details');
+        const modal = document.getElementById('details-modal');
+        const pdfViewer = document.getElementById('pdf-viewer');
+        const closeModalButton = document.querySelector('.close-modal');
+        const downloadButton = document.getElementById('download-button');
+
+        viewDetailsButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const file = button.getAttribute('data-file');
+                pdfViewer.src = file;
+                downloadButton.href = file;
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

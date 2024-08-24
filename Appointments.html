@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="appointments.css">
+</head>
+<body>
+    <h1 class="appoint">Appointments</h1>
+
+    <section id="booking-form">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" placeholder="Enter your name" required>
+            
+            <label for="doctor">Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="" disabled selected>Select a doctor</option>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Johnson">Dr. Johnson</option>
+                <option value="Dr. Lee">Dr. Lee</option>
+            </select>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" placeholder="Describe your reason for the visit" required></textarea>
+            
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <section id="upcoming-appointments">
+        <h2>Upcoming Appointments</h2>
+        <ul id="appointments-list">
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+    
+   
+    const patientName = document.getElementById('patient-name').value;
+    const doctor = document.getElementById('doctor').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const reason = document.getElementById('reason').value;
+    
+    
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <span class="appointment-date">${new Date(date).toLocaleDateString()}</span> - 
+        <span class="appointment-time">${time}</span> with 
+        <span class="doctor-name">${doctor}</span> - 
+        <span class="reason">${reason}</span>
+        <button class="cancel-button">Cancel</button>
+    `;
+    
+    
+    li.querySelector('.cancel-button').addEventListener('click', function() {
+        li.remove();
+    });
+    
+    
+    document.getElementById('appointments-list').appendChild(li);
+    
+    
+    document.getElementById('appointment-form').reset();
+});
+
+    </script>
+</body>
+</html>

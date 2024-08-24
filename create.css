@@ -1,0 +1,161 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-color: #2799c9; */
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.icontext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For the heading */
+.icontext {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+}
+
+ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+li i {
+    margin-right: 15px; 
+}
+
+
+.custom-icon1 {
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(2, 2, 0, 0.1);
+    background-color: rgb(241, 240, 240);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.h {
+    height: 0.5px;
+    background-color: rgb(241, 240, 240);
+}
+
+.right li h2 {
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(2, 2, 0, 0.1);
+    background-color: rgb(241, 240, 240);
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+input[type="text"], button[type="submit"] , input[type="password"] ,input[type="date"], input[type="email"]{
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; 
+}
+
+input[type="text"] ,input[type= "password"], input[type="email"], input[type="date"], input[type ="checkbox"] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #2669b0; 
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 50px; 
+}
+
+input[type ="checkbox"]{
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #92BDF9; 
+    color: #04125C;
+}
+
+label{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inside {
+    width: 400px; 
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 5px;
+
+}
+
+.inside{
+    background: linear-gradient(to right, #316FF6, #1941BA);
+    box-shadow: 5px 5px 10px #04125C, 0px 0px 20px 5px #1941BA, inset 0px 0px 10px 2px #316FF6;
+}
+
+.inside p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+ select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+.gender {
+    margin-top: 20px;
+}
+
+.caret {
+    position: relative;
+}

@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchpage.css">
+    <link rel="icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Search Page</title>
+</head>
+<body>
+    <div class="icontext">
+        <div class="left">
+            <img src="pictures/favicon.ico" alt="logo picture">
+            <h3>MediCo</h3>
+        </div>
+        
+        <div class="right">
+            <input type="button" value="Sign in" onclick="goBack()">
+            <input type="button" value="Get Care" onclick="goBack()" class="hey">
+           
+        </div>
+    </div>
+
+
+    <div class="block-area">
+    <section class="search-section">
+        <div class="search-container1">
+            <form id="searchForm" action="https://www.google.com/search" method="GET">
+           <input type="text" id="searchInput" placeholder="Search for anything" onkeyup="toggleIconVisibility()" name="q">
+            <i class="fa fa-search" id="searchIcon"></i>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="condition-section">
+        <a href="#" class="condition-link">
+        <div class="condition-block">
+            <i class="fas fa-thermometer kay"></i>
+            <h1>Symptoms</h1>
+        </div>
+        </a>
+
+        <a href="#" class="condition-link">
+        <div class="condition-block">
+            <i class="fa fa-stethoscope kay"></i>
+            <h1>Condition</h1>
+        </div>
+        </a>
+
+        <a href="#" class="condition-link">
+        <div class="condition-block">
+            <i class="fas fa-medkit kay"></i>
+            <h1>Treatments</h1>
+        </div>
+        </a>
+
+        <a href="#" class="condition-link">
+        <div class="condition-block">
+            <i class="fas fa-ellipsis-h kay"></i>
+            <h1>Doctors & More</h1>
+        </div>
+        </a>
+
+
+    </section>
+
+
+
+    <section class="article-section">
+        <div class="article-block">
+            <div class="article-text">
+                <h1>Featured articles</h1>
+            </div>
+    
+            <div class="article-inside">
+                <div class="article-content">
+                    <span>Article</span>
+                    <p>Eating healthy on a budget</p>
+                    <span>Simple, cost-effective ways to eat well</span>
+                    <br>
+                    <a href="#">
+                    <button>Read more</button>
+                    </a>
+                </div>
+                <img src="pictures/What Foods Are Bad for Neuropathy_ The Dirty Dozen - Blend of Bites.jpg" class="img-deg">
+            </div>
+
+
+            <div class="article-inside">
+                <div class="article-content">
+                    <span>Article</span>
+                    <p>Managing stress: 10 tips that work</p>
+                    <span>Practical strategies for reducing stress</span>
+                    <br>
+                    <a href="#">
+                    <button>Read more</button>
+                    </a>
+                </div>
+                <img src="pictures/Stress management vector infographic template_ Active lifestyle. Poster, booklet page concept design with flat illustrations. Relaxing. Advertising flyer, leaflet, banner with workflow layout idea" class="img-deg">
+            </div>
+
+
+
+            <div class="article-inside">
+                <div class="article-content">
+                    <span>Article</span>
+                    <p>Understanding diabetes: The basics</p>
+                    <span>Essential information for peaple with diabetes</span>
+                    <br>
+                    <a href="#">
+                    <button>Read more</button>
+                    </a>
+                </div>
+                <img src="pictures/Understanding Diabetes.jpg" class="img-deg">
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>MediCo</h3>
+                <p>Leading provider of healthcare services.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Appointments</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Prescriptions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@medico.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 MediCo. All rights reserved.
+        </div>
+    </footer>
+
+        
+
+<script src="home.js">
+    function toggleIconVisibility() {
+        var inputField = document.getElementById("searchInput");
+        var icon = inputField.parentElement.querySelector("i.fa-search"); 
+        if (inputField.value.trim() !== "") {
+            icon.style.display = "none"; 
+        } else {
+            icon.style.display = "inline-block"; 
+        }}
+</script>
+</body>
+</html>
