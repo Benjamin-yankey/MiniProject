@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telli Medical Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Telli Medical</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="searchpage.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Welcome to Telli Medical Shop</h1>
+            <p>Your Trusted Source for Medical Supplies</p>
+        </section>
+
+        <section class="categories">
+            <h2>Product Categories</h2>
+            <div class="category-grid">
+                <div class="category">
+                    <img src="diagnostic-tools.jpg" alt="Diagnostic Tools">
+                    <h3>Diagnostic Tools</h3>
+                    <p>High-quality diagnostic tools for accurate readings.</p>
+                </div>
+                <div class="category">
+                    <img src="medical-apparel.jpg" alt="Medical Apparel">
+                    <h3>Medical Apparel</h3>
+                    <p>Comfortable and durable medical apparel.</p>
+                </div>
+                <div class="category">
+                    <img src="surgical-instruments.jpg" alt="Surgical Instruments">
+                    <h3>Surgical Instruments</h3>
+                    <p>Precision surgical instruments for professionals.</p>
+                </div>
+                <div class="category">
+                    <img src="health-monitors.jpg" alt="Health Monitors">
+                    <h3>Health Monitors</h3>
+                    <p>Reliable health monitoring devices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+                <!-- Example Product 1 -->
+                <div class="product">
+                    <img src="thermometer.jpg" alt="Digital Thermometer">
+                    <h3>Digital Thermometer</h3>
+                    <p>$19.99</p>
+                    <button onclick="addToCart()">Add to Cart</button>
+                </div>
+
+                <!-- Example Product 2 -->
+                <div class="product">
+                    <img src="stethoscope.jpg" alt="Stethoscope">
+                    <h3>Stethoscope</h3>
+                    <p>$29.99</p>
+                    <button onclick="addToCart()">Add to Cart</button>
+                </div>
+
+                <!-- More products can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <section class="how-to-buy">
+        <h2>How to Buy</h2>
+        <p>Select the products you wish to purchase and add them to your cart. Once you're ready to checkout, click on the cart icon at the top of the page. You will be guided through the checkout process where you can enter your shipping information and choose your payment method.</p>
+    </section>
+
+    <section class="delivery-info">
+        <h2>Delivery Information</h2>
+        <p>We offer fast and reliable shipping options. After placing your order, you will receive an order confirmation email with a tracking number. Depending on your location, your order will be delivered within 3-7 business days.</p>
+    </section>
+    
+    
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>MediCo</h3>
+                <p>Leading provider of healthcare services.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Appointments</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Prescriptions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@medico.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 MediCo. All rights reserved.
+        </div>
+    </footer>
+    
+
+    <script>
+        let cartCount = 0;
+
+function addToCart() {
+    cartCount++;
+    document.getElementById('cart-count').textContent = cartCount;
+    alert("Item added to cart!");
+}
+
+    </script>
+</body>
+
+</html>
