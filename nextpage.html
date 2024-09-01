@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Confirmation</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.confirmation-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.confirmation-message h2 {
+    color: #094482;
+    margin-bottom: 20px;
+}
+
+.confirmation-message p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #094482;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0a569e;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-message">
+            <h2>Thank You!</h2>
+            <p>Your inquiry has been submitted successfully.</p>
+            <p>We will send your lab result to your email once it is confirmed. Please check your email regularly for updates.</p>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

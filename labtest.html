@@ -111,7 +111,7 @@
         <div id="inquiry" class="tab-content">
             <section class="inquiry">
                 <h2>Ask If Your Lab Result Is Ready</h2>
-                <form action="#" method="POST">
+                <form id="inquiry-form" action="#" method="POST">
                     <label for="patient-id-inquiry">Patient ID:</label>
                     <input type="text" id="patient-id-inquiry" name="patient-id-inquiry" required>
                     
@@ -120,7 +120,6 @@
             </section>
         </div>
 
-        <!-- Modal for displaying upload details -->
         <div id="details-modal" class="details-modal">
             <div class="details-content">
                 <button class="close-modal">Close</button>
@@ -128,60 +127,67 @@
                 <a id="download-button" href="" download="LabTestResult.pdf" class="download-button">Download</a>
             </div>
         </div>
-    </div>
 
-    <script>
-        // Get all tab buttons and tab contents
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
+        <script>
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
 
-        // Function to handle tab switching
-        function switchTab(event) {
-            event.preventDefault();
-            const targetId = event.currentTarget.getAttribute('href').substring(1);
+            // Function to handle tab switching
+            function switchTab(event) {
+                event.preventDefault();
+                const targetId = event.currentTarget.getAttribute('href').substring(1);
 
-            tabButtons.forEach(button => {
-                button.classList.remove('active');
-            });
+                tabButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
 
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
 
-            document.querySelector(`.tab-button[href="#${targetId}"]`).classList.add('active');
-            document.getElementById(targetId).classList.add('active');
-        }
-
-        // Add click event listener to each tab button
-        tabButtons.forEach(button => {
-            button.addEventListener('click', switchTab);
-        });
-
-        // Handle recent uploads modal
-        const viewDetailsButtons = document.querySelectorAll('.view-details');
-        const modal = document.getElementById('details-modal');
-        const pdfViewer = document.getElementById('pdf-viewer');
-        const closeModalButton = document.querySelector('.close-modal');
-        const downloadButton = document.getElementById('download-button');
-
-        viewDetailsButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const file = button.getAttribute('data-file');
-                pdfViewer.src = file;
-                downloadButton.href = file;
-                modal.style.display = 'flex';
-            });
-        });
-
-        closeModalButton.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
+                document.querySelector(`.tab-button[href="#${targetId}"]`).classList.add('active');
+                document.getElementById(targetId).classList.add('active');
             }
-        });
-    </script>
+
+            // Add click event listener to each tab button
+            tabButtons.forEach(button => {
+                button.addEventListener('click', switchTab);
+            });
+
+            // Handle recent uploads modal
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            const modal = document.getElementById('details-modal');
+            const pdfViewer = document.getElementById('pdf-viewer');
+            const closeModalButton = document.querySelector('.close-modal');
+            const downloadButton = document.getElementById('download-button');
+
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const file = button.getAttribute('data-file');
+                    pdfViewer.src = file;
+                    downloadButton.href = file;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            closeModalButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Handle inquiry form submission
+            const inquiryForm = document.getElementById('inquiry-form');
+            inquiryForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                alert('We will send your result to your email. Kindly check when we confirm.');
+                window.location.href = 'nextpage.html'; // Redirect to the next page
+            });
+        </script>
+    </div>
 </body>
 </html>
